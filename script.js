@@ -21,18 +21,18 @@ const nodeContent = {
     role: "Protección / memoria / circulación"
   },
   documento: {
-    name: "DOCUMENTO DE CONCILIACIÓN",
+    name: "DOCUMENTO DE CONCILIACIÓN / ADICC",
     description:
-      "Nodo de mayor concentración de decisiones del sistema. Articula el Plan Nacional de Desarrollo, el Plan Departamental de Desarrollo y los planes del Consejo ICC. Su redacción y aprobación define las prioridades del ecosistema completo. Aquí se expresa la tensión entre interés público e interés sectorial.",
-    norms: ["PND", "Plan Dptal de Desarrollo", "Plan Consejo ICC"],
-    role: "Decide / articula / concentra"
+      "Nodo de mayor concentración de decisiones del sistema. El ENICC promueve, define y prioriza iniciativas, programas y proyectos estratégicos del sector, y esa priorización se concreta en la ADICC, Agenda Departamental de Industrias Creativas y Culturales. La ADICC funciona como instrumento de planificación y continuidad entre el PND, los PDD y los PMD, con 32 agendas departamentales y horizonte de seis años para orientar la ejecución ministerial y territorial.",
+    norms: ["ENICC", "ADICC", "PND", "PDD", "PMD"],
+    role: "Prioriza / articula / concentra"
   },
   consejo: {
-    name: "CONSEJO ICC",
+    name: "ENICC / CONSEJO ICC",
     description:
-      "Organismo de representación nacional del sector creativo. Conformado por: empresarios del sector, asociaciones gremiales, consejos de cultura, creadores independientes. Equivale institucionalmente al Consejo Nacional de la Economía Naranja creado por la Ley 1834. Rol: decide y regula.",
-    norms: ["Ley 1834 de 2017", "Consejo Nacional de la Economía Naranja"],
-    role: "Decide / regula"
+      "Instancia mixta de gobernanza, concertación y planeación estratégica del ecosistema ICC. Su composición propuesta integra Consejos Nacionales de Juventud, Consejo Nacional de Cultura, representación empresarial y gremial, Consejo Nacional de Planeación, creadores independientes, asociaciones culturales y ciudadanía organizada. Su función central es definir y priorizar iniciativas, programas y proyectos estratégicos del sector.",
+    norms: ["Ley 1834 de 2017", "Participación ciudadana", "Planeación nacional"],
+    role: "Define / prioriza / decide"
   },
   ministerio: {
     name: "MINISTERIO DE CULTURA + CARTERA",
@@ -44,23 +44,23 @@ const nodeContent = {
   territorial: {
     name: "ENTIDAD TERRITORIAL DEPARTAMENTAL",
     description:
-      "Representación departamental del sistema. Integrada por: consejo departamental de cultura, consejos de juventud, empresas departamentales, sociedad civil organizada. Rol: regula y ejecuta a nivel territorial.",
-    norms: ["Plan Departamental de Desarrollo", "Consejo departamental de cultura"],
-    role: "Regula / ejecuta"
+      "Réplica departamental de la gobernanza del sistema. Debe articular consejos de cultura, juventudes, representantes empresariales, instancias de planeación territorial y sociedad civil, en diálogo con la CRCI y el CODECTI. En esta escala se priorizan proyectos, se aterriza la ADICC y se coordina la continuidad entre el plan departamental, los municipios y la ejecución territorial.",
+    norms: ["PDD", "PMD", "ADICC", "CRCI", "CODECTI"],
+    role: "Regula / ejecuta / prioriza territorialmente"
   },
   sncci: {
     name: "SNCCI / DNP",
     description:
-      "Sistema Nacional de Competitividad e Innovación. Es el puente entre cultura y economía. Conecta las ICC con las dinámicas de mercado, innovación y competitividad del país. El DNP articula los planes de desarrollo con los objetivos del sector creativo.",
-    norms: ["SNCCI", "DNP", "Competitividad e innovación"],
-    role: "Vincula / articula"
+      "Sistema Nacional de Competitividad e Innovación. Es el puente entre cultura, economía y planeación. Conecta las ICC con las dinámicas de competitividad e innovación y puede articularse territorialmente con la CRCI y el CODECTI para fortalecer la incorporación del sector creativo en agendas regionales de desarrollo.",
+    norms: ["SNCCI", "DNP", "CRCI", "CODECTI"],
+    role: "Vincula / articula / coordina"
   },
   regalias: {
     name: "SISTEMA DE REGALÍAS",
     description:
-      "Fuente de financiación territorial para proyectos culturales y creativos. Permite que departamentos y municipios ejecuten recursos en fortalecimiento del sector ICC a nivel local.",
-    norms: ["Sistema General de Regalías", "Financiación territorial"],
-    role: "Financia"
+      "Fuente clave de financiación territorial para proyectos culturales y creativos. Debe leerse junto con el presupuesto nacional de destinación programática, los presupuestos territoriales vinculados a los planes de desarrollo, convocatorias y otras fuentes complementarias, de manera que la ADICC tenga respaldo real para su implementación.",
+    norms: ["Sistema General de Regalías", "Presupuesto nacional", "Presupuesto territorial", "Convocatorias"],
+    role: "Financia / cofinancia"
   },
   creadores: {
     name: "CREADORES / CIUDADANÍA",
@@ -79,9 +79,9 @@ const nodeContent = {
   replica: {
     name: "RÉPLICA TERRITORIAL",
     description:
-      "El modelo nacional puede replicarse: el Consejo ICC nacional se convierte en Consejo Departamental ICC, que dialoga con entidades municipales. A nivel municipal, el modelo se replica en comunas o localidades. Esto genera una cadena de gobernanza cultural multinivel.",
-    norms: ["Gobernanza multinivel", "Consejo Departamental ICC", "Entidades municipales"],
-    role: "Replica / coordina"
+      "El modelo nacional se replica en los departamentos mediante ADICC y consejos territoriales articulados con CRCI y CODECTI. Desde allí dialoga con entidades municipales y otras escalas subregionales, lo que produce una cadena de gobernanza cultural multinivel y permite formular 32 agendas departamentales con continuidad de mediano plazo.",
+    norms: ["Gobernanza multinivel", "ADICC", "CRCI", "CODECTI", "Entidades municipales"],
+    role: "Replica / coordina / da continuidad"
   }
 };
 
