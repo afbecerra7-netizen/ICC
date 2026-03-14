@@ -251,43 +251,51 @@ async function exportSvgToPng() {
       --color-central-soft: #eeedfe;
       --color-paper: #fffdf9;
       --color-ink: #18161f;
+      --color-ink-soft: rgba(24, 22, 31, 0.62);
       --color-muted: #66625f;
       font-family: "DM Sans", sans-serif;
       background: #f8f7f4;
     }
-    .map-dotfield { fill: url(#dotGrid); }
-    .map-heading { font-family: "DM Serif Display", serif; font-size: 30px; fill: #18161f; }
-    .map-subheading { font-size: 13px; fill: #66625f; }
-    .map-microcopy { font-size: 11px; fill: rgba(24, 22, 31, 0.58); }
+    .map-dotfield { fill: url(#dotGrid); opacity: 0.92; }
+    .map-heading { font-family: "DM Serif Display", serif; font-size: 34px; fill: #18161f; letter-spacing: -0.04em; }
+    .map-subheading { font-size: 12px; fill: #66625f; }
+    .map-microcopy { font-size: 10px; fill: rgba(24, 22, 31, 0.46); }
     .map-heading, .map-subheading, .map-microcopy, .node-display, .node-section-title, .node-annotation, .node-annotation-strong, .node-list, .node-caption, .node-highlight, .note-label, .mini-budget-label { dominant-baseline: hanging; }
     .node-card { fill: rgba(255,255,255,0.96); stroke-width: 1.4; }
-    .text-node .node-card { fill: rgba(255,255,255,0); stroke: transparent; }
-    .text-node.is-active .node-card, .text-node.is-linked .node-card, .text-node.is-selected .node-card { fill: rgba(255,253,249,0.94); stroke: rgba(24,22,31,0.16); }
-    .highlight-node .node-card { fill: #ffe159; stroke: rgba(239,159,39,0.5); }
+    .text-node .node-card { fill: rgba(255,255,255,0.18); stroke: transparent; filter: drop-shadow(0 10px 24px rgba(24,22,31,0.04)); }
+    .text-node#node-pnd .node-card { fill: rgba(83,74,183,0.08); stroke: rgba(83,74,183,0.16); }
+    .text-node#node-enicc .node-card { fill: rgba(238,237,254,0.78); stroke: rgba(83,74,183,0.14); }
+    .text-node#node-iniciativas .node-card { fill: rgba(255,253,249,0.84); stroke: rgba(24,22,31,0.08); }
+    .text-node#node-pdd .node-card { fill: rgba(255,255,255,0.82); stroke: rgba(136,135,128,0.16); }
+    .text-node#node-presupuesto .node-card { fill: rgba(55,138,221,0.06); stroke: rgba(55,138,221,0.18); }
+    .text-node#node-ministerios .node-card { fill: rgba(29,158,117,0.05); stroke: rgba(29,158,117,0.18); }
+    .text-node#node-entidades .node-card, .text-node#node-replica .node-card { fill: rgba(136,135,128,0.06); stroke: rgba(136,135,128,0.18); }
+    .text-node.is-active .node-card, .text-node.is-linked .node-card, .text-node.is-selected .node-card { fill: rgba(255,253,249,0.96); stroke: rgba(24,22,31,0.12); filter: drop-shadow(0 18px 28px rgba(24,22,31,0.08)); }
+    .highlight-node .node-card { fill: #ffe159; stroke: rgba(239,159,39,0.68); filter: drop-shadow(0 16px 28px rgba(239,159,39,0.22)); }
     .text-node-centered text { text-anchor: middle; }
-    .node-display { font-size: 34px; font-weight: 700; fill: #18161f; letter-spacing: -0.03em; }
-    .node-section-title { font-size: 24px; font-weight: 700; fill: #18161f; letter-spacing: -0.02em; }
+    .node-display { font-size: 36px; font-weight: 700; fill: #18161f; letter-spacing: -0.03em; }
+    .node-section-title { font-size: 24px; font-weight: 700; fill: #18161f; letter-spacing: -0.03em; }
     .node-section-medium { font-size: 19px; }
     .node-section-small { font-size: 18px; }
     .node-annotation { font-size: 10px; fill: #66625f; }
     .node-annotation-strong { font-size: 10px; font-weight: 700; fill: #18161f; }
-    .node-list { font-size: 10px; fill: #18161f; }
-    .node-list-tight { font-size: 9.6px; }
-    .node-caption { font-size: 10px; fill: #66625f; }
+    .node-list { font-size: 10px; fill: rgba(24,22,31,0.9); }
+    .node-list-tight { font-size: 9.5px; }
+    .node-caption { font-size: 10px; fill: rgba(24,22,31,0.54); }
     .node-caption-strong { font-weight: 700; fill: #18161f; }
-    .node-highlight { font-size: 22px; font-weight: 700; fill: #18161f; letter-spacing: -0.03em; }
+    .node-highlight { font-size: 24px; font-weight: 700; fill: #18161f; letter-spacing: -0.03em; }
     .edge-group { color: var(--edge-color); }
-    .edge { fill: none; stroke: currentColor; vector-effect: non-scaling-stroke; }
-    .edge-track { stroke-width: 2.2; }
+    .edge { fill: none; stroke: currentColor; vector-effect: non-scaling-stroke; stroke-linecap: round; stroke-linejoin: round; }
+    .edge-track { stroke-width: 1.9; opacity: 0.88; }
     .edge-dashed { stroke-dasharray: 6 8; }
-    .edge-flow { stroke-width: 1.2; opacity: 0.75; }
+    .edge-flow { stroke-width: 1; opacity: 0.48; }
     .edge-flow-solid { stroke-dasharray: 12 18; }
     .edge-flow-dashed { stroke-dasharray: 4 10; }
-    .diagram-handline { fill: none; stroke: rgba(24,22,31,0.55); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
-    .budget-branch { fill: none; stroke: rgba(24,22,31,0.58); stroke-width: 1.6; stroke-linecap: round; vector-effect: non-scaling-stroke; }
-    .note-label { font-size: 10px; fill: #66625f; stroke: rgba(255,253,249,0.96); stroke-width: 5px; paint-order: stroke; }
-    .mini-budget-label { font-size: 10px; fill: #343239; }
-    .is-dimmed { opacity: 0.18; }
+    .diagram-handline { fill: none; stroke: rgba(24,22,31,0.38); stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+    .budget-branch { fill: none; stroke: rgba(24,22,31,0.4); stroke-width: 1.3; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+    .note-label { font-size: 10px; fill: #66625f; stroke: rgba(255,253,249,0.98); stroke-width: 5px; paint-order: stroke; }
+    .mini-budget-label { font-size: 10px; fill: rgba(24,22,31,0.68); }
+    .is-dimmed { opacity: 0.14; }
     .edge-group.is-active .edge-track, .edge-group.is-active .edge-flow { stroke-width: 3; }
     .edge-group.is-active .edge-flow { stroke-width: 1.6; }
   `;
