@@ -30,8 +30,8 @@ const nodeContent = {
   comite: {
     name: "COMITÉ DEPARTAMENTAL ICC",
     description:
-      "Instancia territorial de concertacion que replica la logica del comite nacional. En este ajuste del esquema se resume en tres miembros base: juventud, cultura y sector empresarial, como nucleo minimo para aterrizar la agenda ICC en el departamento.",
-    norms: ["Consejo Departamental de Cultura", "Consejo Departamental de Juventud", "Sector empresarial", "Planeacion territorial"],
+      "Instancia territorial de concertacion que replica la logica del comite nacional en clave ampliada. El bloque conserva nueve integrantes: consejo departamental de juventud, consejo departamental de cultura, sector empresarial, consejo departamental de planeacion, academia, secretarias de cultura, CTeI y planeacion, ademas del frente de desarrollo economico.",
+    norms: ["Consejo Departamental de Cultura", "Consejo Departamental de Juventud", "Sector empresarial", "Planeacion territorial", "CTeI", "Desarrollo economico"],
     role: "Alinea / territorializa / prioriza"
   },
   adicc: {
