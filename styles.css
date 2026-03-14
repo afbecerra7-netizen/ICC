@@ -177,6 +177,14 @@ summary {
   gap: 22px;
 }
 
+.reflection-column h4 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--color-central);
+}
+
 .reflection-columns p {
   margin: 0;
 }
