@@ -45,7 +45,7 @@ summary {
 .app-shell {
   width: min(1440px, 100%);
   margin: 0 auto;
-  padding: 24px clamp(18px, 3vw, 36px) 180px;
+  padding: 24px clamp(18px, 3vw, 36px) 40px;
 }
 
 .toolbar {
@@ -436,19 +436,44 @@ body.sidebar-open .sidebar {
 }
 
 .normative-bar {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 8;
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
-  gap: 18px;
+  width: min(1440px, 100%);
+  margin: 0 auto 36px;
+  padding: 0 clamp(18px, 3vw, 36px);
+  border: 0;
+}
+
+.normative-summary {
+  display: inline-flex;
   align-items: center;
-  padding: 18px clamp(18px, 3vw, 36px);
-  border-top: 1px solid rgba(24, 22, 31, 0.08);
+  gap: 10px;
+  list-style: none;
+  cursor: pointer;
+  margin-bottom: 14px;
+  padding: 12px 16px;
+  border: 1px solid rgba(24, 22, 31, 0.08);
+  border-radius: 999px;
   background: rgba(255, 253, 249, 0.94);
-  backdrop-filter: blur(12px);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  box-shadow: 0 12px 28px rgba(24, 22, 31, 0.06);
+}
+
+.normative-summary::-webkit-details-marker {
+  display: none;
+}
+
+.normative-summary::after {
+  content: "−";
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--color-central);
+}
+
+.normative-bar:not([open]) .normative-summary::after {
+  content: "+";
 }
 
 .normative-title {
@@ -463,6 +488,7 @@ body.sidebar-open .sidebar {
   gap: 12px;
   overflow-x: auto;
   padding-bottom: 2px;
+  padding-top: 4px;
   scrollbar-width: thin;
 }
 
@@ -764,10 +790,6 @@ body.sidebar-open .sidebar {
 }
 
 @media (max-width: 1120px) {
-  .app-shell {
-    padding-bottom: 210px;
-  }
-
   .submission-support {
     grid-template-columns: 1fr;
   }
@@ -832,8 +854,7 @@ body.sidebar-open .sidebar {
   }
 
   .normative-bar {
-    grid-template-columns: 1fr;
-    align-items: stretch;
+    margin-bottom: 28px;
   }
 
   .law-chip {
@@ -854,7 +875,6 @@ body.sidebar-open .sidebar {
   .toolbar,
   .legend-panel,
   .tensions-overlay,
-  .normative-bar,
   .close-sidebar {
     display: none !important;
   }
