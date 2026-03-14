@@ -32,7 +32,6 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  overflow: hidden;
   font-family: "DM Sans", sans-serif;
   background:
     radial-gradient(circle at 10% 12%, rgba(83, 74, 183, 0.12), transparent 26%),
@@ -48,14 +47,9 @@ summary {
 }
 
 .app-shell {
-  width: min(1600px, 100%);
+  width: min(1440px, 100%);
   margin: 0 auto;
-  min-height: 100svh;
-  display: grid;
-  grid-template-rows: auto auto minmax(0, 1fr);
-  align-content: start;
-  gap: 14px;
-  padding: 16px clamp(16px, 2.4vw, 28px) 82px;
+  padding: 28px clamp(18px, 3vw, 38px) 44px;
 }
 
 .toolbar {
@@ -115,7 +109,7 @@ summary {
 }
 
 .question-callout {
-  margin-bottom: 0;
+  margin-bottom: 26px;
   border: 1px solid rgba(83, 74, 183, 0.12);
   border-left: 4px solid var(--color-central);
   background:
@@ -123,28 +117,32 @@ summary {
     var(--color-central-soft);
   border-radius: 18px;
   box-shadow: 0 18px 42px rgba(83, 74, 183, 0.1);
-  padding: 12px 16px;
+  padding: 18px 22px;
 }
 
 .question-callout p {
   margin: 0;
   max-width: 92ch;
-  font-size: 0.98rem;
+  font-size: 1.04rem;
   font-weight: 500;
-  line-height: 1.45;
+  line-height: 1.6;
 }
 
 .main-layout {
-  position: relative;
-  height: 100%;
-  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 0;
+  align-items: start;
+  gap: 22px;
+  transition: grid-template-columns 0.35s ease;
+}
+
+body.sidebar-open .main-layout {
+  grid-template-columns: minmax(0, 1fr) 360px;
 }
 
 .map-card {
   position: relative;
   min-width: 0;
-  height: 100%;
-  min-height: 0;
   border: 1px solid rgba(24, 22, 31, 0.08);
   border-radius: var(--radius-lg);
   background:
@@ -176,20 +174,13 @@ summary {
 
 .map-frame {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 0;
-  height: 100%;
-  padding: 16px 18px 14px;
+  padding: 26px;
 }
 
 #ecosystemMap {
   display: block;
-  width: auto;
-  height: min(calc(100svh - 240px), 72vw);
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: auto;
   background:
     radial-gradient(circle at top left, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0) 32%),
     linear-gradient(180deg, rgba(255, 253, 249, 0.98), rgba(249, 248, 243, 0.98)),
@@ -200,10 +191,10 @@ summary {
 
 .legend-panel {
   position: absolute;
-  top: 14px;
-  right: 14px;
+  top: 20px;
+  right: 20px;
   z-index: 4;
-  width: min(290px, calc(100% - 28px));
+  width: min(300px, calc(100% - 40px));
   border: 1px solid rgba(24, 22, 31, 0.08);
   border-radius: 20px;
   background: rgba(255, 253, 249, 0.9);
@@ -340,17 +331,9 @@ summary {
 }
 
 .sidebar {
-  position: fixed;
-  left: 50%;
-  bottom: 74px;
-  z-index: 24;
-  width: min(1080px, calc(100vw - 36px));
   min-width: 0;
-  max-height: min(34svh, 320px);
-  margin-top: 0;
   opacity: 0;
-  overflow: hidden;
-  transform: translate(-50%, 18px);
+  transform: translateX(18px);
   pointer-events: none;
   transition:
     opacity 0.32s ease,
@@ -359,8 +342,7 @@ summary {
 
 body.sidebar-open .sidebar {
   opacity: 1;
-  overflow: visible;
-  transform: translate(-50%, 0);
+  transform: translateX(0);
   pointer-events: auto;
 }
 
@@ -371,15 +353,9 @@ body.sidebar-open .sidebar {
     linear-gradient(180deg, rgba(255, 254, 250, 0.98), rgba(252, 250, 246, 0.98)),
     var(--color-paper);
   box-shadow: var(--shadow-soft);
-  padding: 22px 24px;
-  position: relative;
-  top: auto;
-  max-height: inherit;
-  overflow: auto;
-}
-
-body.sidebar-open .sidebar-inner {
-  animation: sidebar-rise 0.32s ease both;
+  padding: 26px;
+  position: sticky;
+  top: 24px;
 }
 
 .close-sidebar {
@@ -458,13 +434,9 @@ body.sidebar-open .sidebar-inner {
 }
 
 .normative-bar {
-  position: fixed;
-  left: clamp(16px, 2.4vw, 28px);
-  bottom: 14px;
-  z-index: 23;
-  width: min(580px, calc(100vw - 32px));
-  margin: 0;
-  padding: 0;
+  width: min(1440px, 100%);
+  margin: 0 auto 40px;
+  padding: 0 clamp(18px, 3vw, 36px);
   border: 0;
 }
 
@@ -474,7 +446,7 @@ body.sidebar-open .sidebar-inner {
   gap: 10px;
   list-style: none;
   cursor: pointer;
-  margin-bottom: 0;
+  margin-bottom: 14px;
   padding: 12px 16px;
   border: 1px solid rgba(24, 22, 31, 0.08);
   border-radius: 999px;
@@ -513,13 +485,8 @@ body.sidebar-open .sidebar-inner {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 12px;
-  margin-top: 10px;
-  padding: 14px;
-  border: 1px solid rgba(24, 22, 31, 0.08);
-  border-radius: 20px;
-  background: rgba(255, 253, 249, 0.96);
-  box-shadow: 0 18px 36px rgba(24, 22, 31, 0.12);
-  backdrop-filter: blur(10px);
+  padding-bottom: 2px;
+  padding-top: 4px;
 }
 
 .law-chip {
@@ -1045,39 +1012,39 @@ body.sidebar-open .sidebar-inner {
   }
 }
 
-@keyframes sidebar-rise {
-  from {
-    opacity: 0;
-    transform: translateY(14px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @media (max-width: 1120px) {
-  body {
-    overflow: auto;
-  }
-
   .app-shell {
     width: 100%;
-    min-height: auto;
-    display: block;
-    padding-bottom: 120px;
   }
 
-  #ecosystemMap {
-    width: 100%;
-    height: auto;
-    max-height: none;
+  .main-layout {
+    grid-template-columns: 1fr;
+  }
+
+  body.sidebar-open .main-layout {
+    grid-template-columns: 1fr;
   }
 
   .sidebar {
-    width: calc(100vw - 28px);
-    max-height: min(46svh, 420px);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: min(88vw, 380px);
+    z-index: 10;
+    transform: translateX(100%);
+    opacity: 1;
+  }
+
+  body.sidebar-open .sidebar {
+    transform: translateX(0);
+  }
+
+  .sidebar-inner {
+    height: 100%;
+    overflow-y: auto;
+    border-radius: 28px 0 0 28px;
+    border-right: 0;
   }
 
   .tension-tag:nth-child(4) {
@@ -1106,13 +1073,11 @@ body.sidebar-open .sidebar-inner {
   }
 
   .map-frame {
-    display: block;
-    height: auto;
     padding: 12px;
   }
 
   .normative-bar {
-    width: min(560px, calc(100vw - 24px));
+    margin-bottom: 28px;
   }
 
   .normative-list {
@@ -1165,7 +1130,6 @@ body.sidebar-open .sidebar-inner {
     opacity: 1;
     pointer-events: auto;
     margin-top: 16px;
-    max-height: none;
   }
 
   #ecosystemMap {
