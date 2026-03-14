@@ -548,6 +548,10 @@ body.sidebar-open .sidebar {
   font-size: 10px;
   font-weight: 700;
   fill: rgba(24, 22, 31, 0.48);
+  paint-order: stroke;
+  stroke: rgba(255, 253, 249, 0.96);
+  stroke-width: 5px;
+  stroke-linejoin: round;
 }
 
 .node {
@@ -755,6 +759,11 @@ body.sidebar-open .sidebar {
   paint-order: stroke;
   stroke: rgba(255, 253, 249, 0.92);
   stroke-width: 4px;
+  stroke-linejoin: round;
+}
+
+.overlay-annotations {
+  pointer-events: none;
 }
 
 .is-active .node-card,
