@@ -14,17 +14,24 @@ const nodeContent = {
     role: "Promueve / define / prioriza"
   },
   iniciativas: {
-    name: "INICIATIVAS / CONSEJO NACIONAL ICC",
+    name: "COMITÉ NACIONAL ICC",
     description:
-      "Bloque de representacion nacional desde donde se conceptuan, vigilan y priorizan iniciativas. La propuesta recoge cinco voces base: Consejos Nacionales de Juventud, Consejo Nacional de Cultura, sector empresarial, Consejo Nacional de Planeacion y academia, con apertura a otras formas de representacion ciudadana.",
-    norms: ["Participacion ciudadana", "Consejo Nacional de Cultura", "Consejos de Juventud", "Planeacion nacional"],
+      "Instancia nacional de representacion y concertacion para priorizar iniciativas del ecosistema ICC. En esta version del esquema se sintetiza en cinco miembros base: juventud, cultura, sector empresarial, Consejo Privado de Competitividad y representacion de Confecamaras, como nucleo minimo para la deliberacion sectorial y la articulacion con el ecosistema productivo.",
+    norms: ["Participacion ciudadana", "Consejo Nacional de Cultura", "Consejos de Juventud", "Sector empresarial", "Consejo Privado de Competitividad", "Confecamaras"],
     role: "Conceptua / vigila / propone"
   },
   pdd: {
-    name: "PDD / COMITÉ DEPARTAMENTAL ICC",
+    name: "PDD",
     description:
-      "El nivel departamental replica la gobernanza nacional en clave territorial. El comite departamental integra juventud, cultura, sector empresarial, planeacion, academia y secretarias estrategicas para alinear el Plan Departamental de Desarrollo con la agenda ICC del territorio.",
-    norms: ["PDD", "Consejo Departamental de Cultura", "Consejo Departamental de Juventud", "Planeacion territorial"],
+      "El Plan Departamental de Desarrollo funciona aqui como marco de referencia territorial. Desde este nodo se alinean prioridades, metas y recursos del departamento con la agenda ICC y con la continuidad entre planeacion nacional, departamental y municipal.",
+    norms: ["PDD", "Planeacion territorial", "Gobernanza departamental"],
+    role: "Enmarca / orienta / articula"
+  },
+  comite: {
+    name: "COMITÉ DEPARTAMENTAL ICC",
+    description:
+      "Instancia territorial de concertacion que replica la logica del comite nacional. En este ajuste del esquema se resume en tres miembros base: juventud, cultura y sector empresarial, como nucleo minimo para aterrizar la agenda ICC en el departamento.",
+    norms: ["Consejo Departamental de Cultura", "Consejo Departamental de Juventud", "Sector empresarial", "Planeacion territorial"],
     role: "Alinea / territorializa / prioriza"
   },
   adicc: {
@@ -42,10 +49,10 @@ const nodeContent = {
     role: "Financia / habilita ejecucion"
   },
   ministerios: {
-    name: "MINISTERIOS",
+    name: "MINISTERIO DE CULTURA",
     description:
-      "Los ministerios convierten la priorizacion en ejecucion nacional con enfoque departamental. En esta capa entran Ministerio de las Culturas y otras carteras competentes, que implementan programas, convocatorias y proyectos asociados a la agenda acordada.",
-    norms: ["Ministerio de las Culturas", "Carteras asociadas", "Presupuesto nacional"],
+      "El Ministerio de Cultura convierte la priorizacion en ejecucion nacional con enfoque departamental. En este esquema aparecen sus direcciones de Patrimonio y Memoria, Fomento Regional, Poblaciones, Artes, Audiovisuales, Cine y Medios Interactivos, y Estrategia, Desarrollo y Emprendimiento, como frentes que pueden aterrizar la agenda ICC en programas, convocatorias y proyectos.",
+    norms: ["Ministerio de Cultura", "Direcciones misionales", "Presupuesto nacional"],
     role: "Ejecuta / implementa"
   },
   entidades: {
@@ -267,6 +274,7 @@ async function exportSvgToPng() {
     .text-node#node-enicc .node-card { fill: rgba(238,237,254,0.78); stroke: rgba(83,74,183,0.14); }
     .text-node#node-iniciativas .node-card { fill: rgba(255,253,249,0.84); stroke: rgba(24,22,31,0.08); }
     .text-node#node-pdd .node-card { fill: rgba(255,255,255,0.82); stroke: rgba(136,135,128,0.16); }
+    .text-node#node-comite .node-card { fill: rgba(255,255,255,0.82); stroke: rgba(136,135,128,0.16); }
     .text-node#node-presupuesto .node-card { fill: rgba(55,138,221,0.06); stroke: rgba(55,138,221,0.18); }
     .text-node#node-ministerios .node-card { fill: rgba(29,158,117,0.05); stroke: rgba(29,158,117,0.18); }
     .text-node#node-entidades .node-card, .text-node#node-replica .node-card { fill: rgba(136,135,128,0.06); stroke: rgba(136,135,128,0.18); }

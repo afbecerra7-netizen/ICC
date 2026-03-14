@@ -791,6 +791,11 @@ body.sidebar-open .sidebar {
   stroke: rgba(136, 135, 128, 0.16);
 }
 
+.text-node#node-comite .node-card {
+  fill: rgba(255, 255, 255, 0.82);
+  stroke: rgba(136, 135, 128, 0.16);
+}
+
 .text-node#node-presupuesto .node-card {
   fill: rgba(55, 138, 221, 0.06);
   stroke: rgba(55, 138, 221, 0.18);
