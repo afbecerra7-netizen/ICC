@@ -27,8 +27,9 @@
 
       <section class="question-callout" aria-label="Pregunta central">
         <p>
-          ¿Dónde se concentran las decisiones? → En el Documento de Conciliación y la ADICC:
-          nodo donde confluyen el ENICC, el PND, los PDD, los PMD y la priorización territorial.
+          ¿Dónde se organiza la continuidad del sistema? → En la ADICC: agenda donde el ENICC
+          aterriza prioridades entre el PND, los PDD, los PMD y el presupuesto de destinación
+          programática.
         </p>
       </section>
 
@@ -38,32 +39,24 @@
             <summary>Leyenda</summary>
             <div class="legend-items">
               <div class="legend-item">
+                <span class="legend-swatch" style="background: #534ab7"></span>
+                <span>Gobernanza nacional: PND y ENICC</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-swatch" style="background: #efc94c"></span>
+                <span>ADICC como instrumento de priorización</span>
+              </div>
+              <div class="legend-item">
                 <span class="legend-swatch" style="background: #1d9e75"></span>
-                <span>Cultura y ejecución nacional</span>
-              </div>
-              <div class="legend-item">
-                <span class="legend-swatch" style="background: #7f77dd"></span>
-                <span>Creación, ICC, Consejo e industrias</span>
-              </div>
-              <div class="legend-item">
-                <span class="legend-swatch" style="background: #ef9f27"></span>
-                <span>Patrimonio y protección</span>
+                <span>Ministerios y ejecución nacional</span>
               </div>
               <div class="legend-item">
                 <span class="legend-swatch" style="background: #378add"></span>
-                <span>SNCCI, innovación y competitividad</span>
-              </div>
-              <div class="legend-item">
-                <span class="legend-swatch" style="background: #639922"></span>
-                <span>Regalías y financiación territorial</span>
-              </div>
-              <div class="legend-item">
-                <span class="legend-swatch" style="background: #d85a30"></span>
-                <span>Creadores, ciudadanía e incidencia</span>
+                <span>Presupuesto y ruta programática</span>
               </div>
               <div class="legend-item">
                 <span class="legend-swatch" style="background: #888780"></span>
-                <span>Gobernanza territorial</span>
+                <span>Escala departamental y municipal</span>
               </div>
             </div>
           </details>
@@ -114,510 +107,377 @@
                 <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
                   <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#1f18441a" />
                 </filter>
+                <pattern id="dotGrid" width="14" height="14" patternUnits="userSpaceOnUse">
+                  <circle cx="2" cy="2" r="1" fill="#e6e1d8"></circle>
+                </pattern>
               </defs>
+
+              <rect class="map-dotfield" width="900" height="700" rx="26"></rect>
 
               <text class="map-heading" x="48" y="52">Ecosistema ICC Colombiano + SNCCI</text>
               <text class="map-subheading" x="48" y="78">
                 Legislación y Política para Creación, Cultura y Patrimonio · 2026
               </text>
+              <text class="map-microcopy" x="664" y="56">32 departamentos + Distrito Capital</text>
 
               <g
                 class="edge-group"
-                data-edge="cultura-documento"
-                data-from="cultura"
-                data-to="documento"
-                style="--edge-color: var(--color-cultura)"
+                data-edge="pnd-enicc"
+                data-from="pnd"
+                data-to="enicc"
+                style="--edge-color: var(--color-central)"
               >
                 <path
                   class="edge edge-track edge-solid"
-                  d="M165 198 C205 208, 238 216, 300 226"
+                  d="M450 118 L450 142"
                   marker-end="url(#arrowSolid)"
                 ></path>
-                <path class="edge edge-flow edge-flow-solid" d="M165 198 C205 208, 238 216, 300 226"></path>
+                <path class="edge edge-flow edge-flow-solid" d="M450 118 L450 142"></path>
               </g>
+
               <g
                 class="edge-group"
-                data-edge="creacion-documento"
-                data-from="creacion"
-                data-to="documento"
+                data-edge="enicc-iniciativas"
+                data-from="enicc"
+                data-to="iniciativas"
+                style="--edge-color: #2b2832"
+              >
+                <path
+                  class="edge edge-track edge-solid"
+                  d="M390 206 C342 214, 302 224, 254 238"
+                  marker-end="url(#arrowSolid)"
+                ></path>
+                <path class="edge edge-flow edge-flow-solid" d="M390 206 C342 214, 302 224, 254 238"></path>
+              </g>
+
+              <g
+                class="edge-group"
+                data-edge="enicc-pdd"
+                data-from="enicc"
+                data-to="pdd"
+                style="--edge-color: #2b2832"
+              >
+                <path
+                  class="edge edge-track edge-solid"
+                  d="M526 206 C578 218, 620 226, 664 238"
+                  marker-end="url(#arrowSolid)"
+                ></path>
+                <path class="edge edge-flow edge-flow-solid" d="M526 206 C578 218, 620 226, 664 238"></path>
+              </g>
+
+              <g
+                class="edge-group"
+                data-edge="enicc-adicc"
+                data-from="enicc"
+                data-to="adicc"
                 style="--edge-color: var(--color-creacion)"
               >
                 <path
                   class="edge edge-track edge-solid"
-                  d="M450 198 L450 226"
+                  d="M450 224 C450 292, 450 356, 450 430"
                   marker-end="url(#arrowSolid)"
                 ></path>
-                <path class="edge edge-flow edge-flow-solid" d="M450 198 L450 226"></path>
-              </g>
-              <g
-                class="edge-group"
-                data-edge="patrimonio-documento"
-                data-from="patrimonio"
-                data-to="documento"
-                style="--edge-color: var(--color-patrimonio)"
-              >
-                <path
-                  class="edge edge-track edge-solid"
-                  d="M735 198 C695 208, 662 216, 600 226"
-                  marker-end="url(#arrowSolid)"
-                ></path>
-                <path class="edge edge-flow edge-flow-solid" d="M735 198 C695 208, 662 216, 600 226"></path>
+                <path class="edge edge-flow edge-flow-solid" d="M450 224 C450 292, 450 356, 450 430"></path>
               </g>
 
               <g
                 class="edge-group"
-                data-edge="consejo-documento"
-                data-from="consejo"
-                data-to="documento"
-                style="--edge-color: var(--color-creacion)"
-                >
-                <path
-                  class="edge edge-track edge-solid"
-                  d="M148 390 C185 372, 220 352, 290 336"
-                  marker-end="url(#arrowSolid)"
-                ></path>
-                <path class="edge edge-flow edge-flow-solid" d="M148 390 C185 372, 220 352, 290 336"></path>
-              </g>
-              <g
-                class="edge-group"
-                data-edge="documento-consejo"
-                data-from="documento"
-                data-to="consejo"
-                style="--edge-color: var(--color-creacion)"
-                >
-                <path
-                  class="edge edge-track edge-dashed"
-                  d="M310 336 C250 352, 214 372, 170 390"
-                  marker-end="url(#arrowDashed)"
-                ></path>
-                <path class="edge edge-flow edge-flow-dashed" d="M310 336 C250 352, 214 372, 170 390"></path>
-              </g>
-
-              <g
-                class="edge-group"
-                data-edge="ministerio-documento"
-                data-from="ministerio"
-                data-to="documento"
-                style="--edge-color: var(--color-cultura)"
-                >
-                <path
-                  class="edge edge-track edge-solid"
-                  d="M450 390 L450 336"
-                  marker-end="url(#arrowSolid)"
-                ></path>
-                <path class="edge edge-flow edge-flow-solid" d="M450 390 L450 336"></path>
-              </g>
-              <g
-                class="edge-group"
-                data-edge="documento-ministerio"
-                data-from="documento"
-                data-to="ministerio"
-                style="--edge-color: var(--color-cultura)"
-                >
-                <path
-                  class="edge edge-track edge-dashed"
-                  d="M470 336 L470 390"
-                  marker-end="url(#arrowDashed)"
-                ></path>
-                <path class="edge edge-flow edge-flow-dashed" d="M470 336 L470 390"></path>
-              </g>
-
-              <g
-                class="edge-group"
-                data-edge="territorial-documento"
-                data-from="territorial"
-                data-to="documento"
+                data-edge="pdd-adicc"
+                data-from="pdd"
+                data-to="adicc"
                 style="--edge-color: var(--color-territorial)"
-                >
-                <path
-                  class="edge edge-track edge-solid"
-                  d="M752 390 C715 372, 680 352, 610 336"
-                  marker-end="url(#arrowSolid)"
-                ></path>
-                <path class="edge edge-flow edge-flow-solid" d="M752 390 C715 372, 680 352, 610 336"></path>
-              </g>
-              <g
-                class="edge-group"
-                data-edge="documento-territorial"
-                data-from="documento"
-                data-to="territorial"
-                style="--edge-color: var(--color-territorial)"
-                >
+              >
                 <path
                   class="edge edge-track edge-dashed"
-                  d="M590 336 C650 352, 686 372, 730 390"
+                  d="M700 376 C688 406, 642 430, 484 458"
                   marker-end="url(#arrowDashed)"
                 ></path>
-                <path class="edge edge-flow edge-flow-dashed" d="M590 336 C650 352, 686 372, 730 390"></path>
+                <path class="edge edge-flow edge-flow-dashed" d="M700 376 C688 406, 642 430, 484 458"></path>
               </g>
 
               <g
                 class="edge-group"
-                data-edge="creadores-consejo"
-                data-from="creadores"
-                data-to="consejo"
-                style="--edge-color: var(--color-creadores)"
-                >
+                data-edge="iniciativas-adicc"
+                data-from="iniciativas"
+                data-to="adicc"
+                style="--edge-color: #2b2832"
+              >
                 <path
                   class="edge edge-track edge-solid"
-                  d="M115 542 C122 520, 132 508, 145 494"
+                  d="M264 352 C326 366, 380 398, 418 454"
                   marker-end="url(#arrowSolid)"
                 ></path>
-                <path class="edge edge-flow edge-flow-solid" d="M115 542 C122 520, 132 508, 145 494"></path>
+                <path class="edge edge-flow edge-flow-solid" d="M264 352 C326 366, 380 398, 418 454"></path>
               </g>
 
               <g
                 class="edge-group"
-                data-edge="industrias-sncci"
-                data-from="industrias"
-                data-to="sncci"
-                style="--edge-color: var(--color-creacion)"
-                >
-                <path
-                  class="edge edge-track edge-solid"
-                  d="M335 580 L460 580"
-                  marker-end="url(#arrowSolid)"
-                ></path>
-                <path class="edge edge-flow edge-flow-solid" d="M335 580 L460 580"></path>
-              </g>
-
-              <g
-                class="edge-group"
-                data-edge="sncci-documento"
-                data-from="sncci"
-                data-to="documento"
+                data-edge="adicc-presupuesto"
+                data-from="adicc"
+                data-to="presupuesto"
                 style="--edge-color: var(--color-sncci)"
-                >
+              >
+                <path
+                  class="edge edge-track edge-dashed"
+                  d="M480 462 C520 460, 560 458, 598 458"
+                  marker-end="url(#arrowDashed)"
+                ></path>
+                <path class="edge edge-flow edge-flow-dashed" d="M480 462 C520 460, 560 458, 598 458"></path>
+              </g>
+
+              <g
+                class="edge-group"
+                data-edge="adicc-ministerios"
+                data-from="adicc"
+                data-to="ministerios"
+                style="--edge-color: var(--color-cultura)"
+              >
                 <path
                   class="edge edge-track edge-solid"
-                  d="M555 542 C655 528, 646 424, 560 336"
+                  d="M418 486 C364 504, 314 524, 276 544"
                   marker-end="url(#arrowSolid)"
                 ></path>
-                <path class="edge edge-flow edge-flow-solid" d="M555 542 C655 528, 646 424, 560 336"></path>
+                <path class="edge edge-flow edge-flow-solid" d="M418 486 C364 504, 314 524, 276 544"></path>
               </g>
 
               <g
                 class="edge-group"
-                data-edge="regalias-territorial"
-                data-from="regalias"
-                data-to="territorial"
-                style="--edge-color: var(--color-regalias)"
-                >
+                data-edge="adicc-entidades"
+                data-from="adicc"
+                data-to="entidades"
+                style="--edge-color: var(--color-territorial)"
+              >
+                <path
+                  class="edge edge-track edge-dashed"
+                  d="M458 486 C474 516, 474 548, 456 582"
+                  marker-end="url(#arrowDashed)"
+                ></path>
+                <path class="edge edge-flow edge-flow-dashed" d="M458 486 C474 516, 474 548, 456 582"></path>
+              </g>
+
+              <g
+                class="edge-group"
+                data-edge="presupuesto-entidades"
+                data-from="presupuesto"
+                data-to="entidades"
+                style="--edge-color: var(--color-sncci)"
+              >
                 <path
                   class="edge edge-track edge-solid"
-                  d="M775 542 L750 494"
+                  d="M632 514 C604 542, 566 558, 518 584"
                   marker-end="url(#arrowSolid)"
                 ></path>
-                <path class="edge edge-flow edge-flow-solid" d="M775 542 L750 494"></path>
+                <path class="edge edge-flow edge-flow-solid" d="M632 514 C604 542, 566 558, 518 584"></path>
               </g>
 
               <g
                 class="edge-group"
-                data-edge="consejo-replica"
-                data-from="consejo"
-                data-to="replica"
-                style="--edge-color: var(--color-territorial)"
+                data-edge="ministerios-iniciativas"
+                data-from="ministerios"
+                data-to="iniciativas"
+                style="--edge-color: #2b2832"
               >
                 <path
-                  class="edge edge-track edge-dashed"
-                  d="M150 494 L150 640"
-                  marker-end="url(#arrowDashed)"
+                  class="edge edge-track edge-solid"
+                  d="M214 568 C112 566, 42 478, 50 350 C56 286, 80 234, 112 228"
+                  marker-end="url(#arrowSolid)"
                 ></path>
-                <path class="edge edge-flow edge-flow-dashed" d="M150 494 L150 640"></path>
+                <path class="edge edge-flow edge-flow-solid" d="M214 568 C112 566, 42 478, 50 350 C56 286, 80 234, 112 228"></path>
               </g>
+
               <g
                 class="edge-group"
-                data-edge="ministerio-replica"
-                data-from="ministerio"
+                data-edge="entidades-replica"
+                data-from="entidades"
                 data-to="replica"
                 style="--edge-color: var(--color-territorial)"
               >
                 <path
-                  class="edge edge-track edge-dashed"
-                  d="M450 494 L450 640"
-                  marker-end="url(#arrowDashed)"
+                  class="edge edge-track edge-solid"
+                  d="M498 620 C520 646, 586 654, 646 640"
+                  marker-end="url(#arrowSolid)"
                 ></path>
-                <path class="edge edge-flow edge-flow-dashed" d="M450 494 L450 640"></path>
-              </g>
-              <g
-                class="edge-group"
-                data-edge="territorial-replica"
-                data-from="territorial"
-                data-to="replica"
-                style="--edge-color: var(--color-territorial)"
-              >
-                <path
-                  class="edge edge-track edge-dashed"
-                  d="M750 494 L750 640"
-                  marker-end="url(#arrowDashed)"
-                ></path>
-                <path class="edge edge-flow edge-flow-dashed" d="M750 494 L750 640"></path>
+                <path class="edge edge-flow edge-flow-solid" d="M498 620 C520 646, 586 654, 646 640"></path>
               </g>
 
               <g
-                class="node node-triad tone-cultura"
-                id="node-cultura"
-                data-node="cultura"
+                class="node text-node text-node-centered tone-documento"
+                id="node-pnd"
+                data-node="pnd"
                 tabindex="0"
                 role="button"
-                aria-label="Cultura"
-                transform="translate(55 118)"
+                aria-label="Plan Nacional de Desarrollo"
+                transform="translate(350 74)"
               >
-                <rect class="node-card" width="220" height="88" rx="18" filter="url(#cardShadow)"></rect>
-                <rect class="node-bar" width="220" height="8" rx="18"></rect>
-                <text class="node-title" x="18" y="24">CULTURA</text>
-                <text class="node-subtitle" x="18" y="44">
-                  <tspan x="18" dy="0">Derecho / Art.70–72 C.P.</tspan>
-                  <tspan x="18" dy="13">Ley 397</tspan>
-                </text>
+                <rect class="node-card" width="200" height="58" rx="18"></rect>
+                <text class="node-display" x="100" y="10">PND</text>
               </g>
 
               <g
-                class="node node-triad tone-creacion"
-                id="node-creacion"
-                data-node="creacion"
+                class="node text-node text-node-centered tone-creacion"
+                id="node-enicc"
+                data-node="enicc"
                 tabindex="0"
                 role="button"
-                aria-label="Creación"
-                transform="translate(340 118)"
+                aria-label="ENICC"
+                transform="translate(290 136)"
               >
-                <rect class="node-card" width="220" height="88" rx="18" filter="url(#cardShadow)"></rect>
-                <rect class="node-bar" width="220" height="8" rx="18"></rect>
-                <text class="node-title" x="18" y="24">CREACIÓN</text>
-                <text class="node-subtitle" x="18" y="44">
-                  <tspan x="18" dy="0">ICC / Ley 1834 de 2017</tspan>
-                  <tspan x="18" dy="13">Propiedad intelectual</tspan>
+                <rect class="node-card" width="320" height="82" rx="24"></rect>
+                <text class="node-section-title" x="160" y="10">ENICC</text>
+                <text class="node-annotation" x="160" y="44">3 miembros</text>
+                <text class="node-annotation" x="160" y="60">
+                  Ministerio de las Culturas, las Artes y los Saberes
                 </text>
               </g>
 
               <g
-                class="node node-triad tone-patrimonio"
-                id="node-patrimonio"
-                data-node="patrimonio"
+                class="node text-node tone-documento"
+                id="node-iniciativas"
+                data-node="iniciativas"
                 tabindex="0"
                 role="button"
-                aria-label="Patrimonio"
-                transform="translate(625 118)"
+                aria-label="Iniciativas"
+                transform="translate(74 172)"
               >
-                <rect class="node-card" width="220" height="88" rx="18" filter="url(#cardShadow)"></rect>
-                <rect class="node-bar" width="220" height="8" rx="18"></rect>
-                <text class="node-title" x="18" y="24">PATRIMONIO</text>
-                <text class="node-subtitle" x="18" y="44">
-                  <tspan x="18" dy="0">Memoria / Art.72 C.P.</tspan>
-                  <tspan x="18" dy="13">UNESCO 2005</tspan>
+                <rect class="node-card" width="268" height="196" rx="22"></rect>
+                <text class="node-section-title" x="18" y="10">INICIATIVAS</text>
+                <text class="node-annotation" x="18" y="66">5 integrantes sugeridos</text>
+                <text class="node-annotation-strong" x="18" y="82">Consejo Nacional ICC</text>
+                <text class="node-list" x="18" y="106">
+                  <tspan x="18" dy="0">1. Consejos Nac. de Juventud</tspan>
+                  <tspan x="18" dy="13">2. Consejo Nacional de Cultura</tspan>
+                  <tspan x="18" dy="13">3. Sector empresarial</tspan>
+                  <tspan x="18" dy="13">4. Consejo Nacional de Planeación</tspan>
+                  <tspan x="18" dy="13">5. Representante de la academia</tspan>
                 </text>
               </g>
 
               <g
-                class="node tone-documento is-central"
-                id="node-documento"
-                data-node="documento"
+                class="node text-node tone-territorial"
+                id="node-pdd"
+                data-node="pdd"
                 tabindex="0"
                 role="button"
-                aria-label="Documento de conciliación y ADICC"
-                transform="translate(210 226)"
+                aria-label="PDD y comité departamental"
+                transform="translate(582 146)"
               >
-                <rect class="node-card central-fill" width="480" height="110" rx="24"></rect>
-                <rect class="node-double-border" x="8" y="8" width="464" height="94" rx="18"></rect>
-                <text class="node-title central-title" x="24" y="36">DOCUMENTO DE CONCILIACIÓN</text>
-                <text class="node-subtitle" x="24" y="60">
-                  ENICC + ADICC + PND / PDD / PMD
+                <rect class="node-card" width="252" height="234" rx="24"></rect>
+                <text class="node-display" x="18" y="0">PDD</text>
+                <text class="node-annotation" x="18" y="52">9 miembros</text>
+                <text class="node-annotation-strong" x="18" y="70">
+                  Comité Departamental de Industrias Creativas y Culturales
                 </text>
-                <g class="decision-badge" transform="translate(24 72)">
-                  <rect width="260" height="22" rx="11"></rect>
-                  <text x="14" y="15">NODO DE DECISIÓN CONCENTRADA</text>
-                </g>
+                <text class="node-list node-list-tight" x="18" y="100">
+                  <tspan x="18" dy="0">1. Consejo Dptal de Juventud</tspan>
+                  <tspan x="18" dy="12">2. Consejo Dptal de Cultura</tspan>
+                  <tspan x="18" dy="12">3. Sector empresarial</tspan>
+                  <tspan x="18" dy="12">4. Consejo Dptal de Planeación</tspan>
+                  <tspan x="18" dy="12">5. Academia</tspan>
+                  <tspan x="18" dy="12">6. Secretaría de Cultura</tspan>
+                  <tspan x="18" dy="12">7. Secretaría de CTeI</tspan>
+                  <tspan x="18" dy="12">8. Desarrollo Económico</tspan>
+                  <tspan x="18" dy="12">9. Secretaría de Planeación</tspan>
+                </text>
               </g>
 
               <g
-                class="node tone-creacion"
-                id="node-consejo"
-                data-node="consejo"
+                class="node highlight-node text-node-centered tone-patrimonio"
+                id="node-adicc"
+                data-node="adicc"
                 tabindex="0"
                 role="button"
-                aria-label="Consejo ICC"
-                transform="translate(35 390)"
+                aria-label="ADICC"
+                transform="translate(320 430)"
               >
-                <rect class="node-card" width="230" height="112" rx="20" filter="url(#cardShadow)"></rect>
-                <rect class="node-bar" width="230" height="8" rx="20"></rect>
-                <text class="node-title" x="18" y="26">
-                  <tspan x="18" dy="0">ENICC /</tspan>
-                  <tspan x="18" dy="14">CONSEJO ICC</tspan>
-                </text>
-                <text class="node-meta" x="18" y="60">
-                  <tspan x="18" dy="0">Juventud · Cultura · Empresarios</tspan>
-                  <tspan x="18" dy="14">Planeación · Creadores · Ciudadanía</tspan>
-                </text>
-                <text class="node-role" x="18" y="92">Rol: Define / Prioriza</text>
+                <rect
+                  class="node-card"
+                  width="160"
+                  height="58"
+                  rx="10"
+                  filter="url(#cardShadow)"
+                ></rect>
+                <text class="node-highlight" x="80" y="14">ADICC</text>
               </g>
 
               <g
-                class="node tone-cultura"
-                id="node-ministerio"
-                data-node="ministerio"
+                class="node text-node text-node-centered tone-sncci"
+                id="node-presupuesto"
+                data-node="presupuesto"
                 tabindex="0"
                 role="button"
-                aria-label="Ministerio de Cultura y cartera"
-                transform="translate(335 390)"
+                aria-label="Presupuesto de destinación"
+                transform="translate(562 420)"
               >
-                <rect class="node-card" width="230" height="104" rx="20" filter="url(#cardShadow)"></rect>
-                <rect class="node-bar" width="230" height="8" rx="20"></rect>
-                <text class="node-title" x="18" y="30">
-                  <tspan x="18" dy="0">MINISTERIO DE CULTURA</tspan>
-                  <tspan x="18" dy="14">+ Min. con cartera</tspan>
+                <rect class="node-card" width="248" height="98" rx="22"></rect>
+                <text class="node-section-title node-section-medium" x="124" y="16">
+                  Presupuesto de destinación
                 </text>
-                <text class="node-meta" x="18" y="62">Delegados nacionales del gobierno</text>
-                <text class="node-role" x="18" y="82">Rol: Ejecuta / Financia</text>
+                <text class="node-annotation" x="124" y="52">PND · PDD · PMD</text>
               </g>
 
               <g
-                class="node tone-territorial"
-                id="node-territorial"
-                data-node="territorial"
+                class="node text-node text-node-centered tone-cultura"
+                id="node-ministerios"
+                data-node="ministerios"
                 tabindex="0"
                 role="button"
-                aria-label="Entidad territorial departamental"
-                transform="translate(635 390)"
+                aria-label="Ministerios"
+                transform="translate(144 518)"
               >
-                <rect class="node-card" width="230" height="112" rx="20" filter="url(#cardShadow)"></rect>
-                <rect class="node-bar" width="230" height="8" rx="20"></rect>
-                <text class="node-title" x="18" y="30">
-                  <tspan x="18" dy="0">ENTIDAD TERRITORIAL</tspan>
-                  <tspan x="18" dy="14">DEPARTAMENTAL</tspan>
+                <rect class="node-card" width="176" height="106" rx="20"></rect>
+                <text class="node-section-title node-section-small" x="88" y="18">Ministerios</text>
+                <text class="node-caption" x="88" y="88">
+                  Nacional con enfoque departamental
                 </text>
-                <text class="node-meta" x="18" y="62">
-                  <tspan x="18" dy="0">Cultura · Juventud · CRCI · CODECTI</tspan>
-                  <tspan x="18" dy="14">Empresas · Planeación · Sociedad civil</tspan>
-                </text>
-                <text class="node-role" x="18" y="100">Rol: Regula / Ejecuta / Prioriza</text>
               </g>
 
               <g
-                class="node node-compact tone-creadores"
-                id="node-creadores"
-                data-node="creadores"
+                class="node text-node text-node-centered tone-territorial"
+                id="node-entidades"
+                data-node="entidades"
                 tabindex="0"
                 role="button"
-                aria-label="Creadores y ciudadanía"
-                transform="translate(20 542)"
+                aria-label="Entidades territoriales"
+                transform="translate(386 514)"
               >
-                <rect class="node-card" width="190" height="92" rx="18" filter="url(#cardShadow)"></rect>
-                <rect class="node-bar" width="190" height="8" rx="18"></rect>
-                <text class="node-title" x="18" y="20">
-                  <tspan x="18" dy="0">CREADORES /</tspan>
-                  <tspan x="18" dy="14">CIUDADANÍA</tspan>
+                <rect class="node-card" width="188" height="112" rx="20"></rect>
+                <text class="node-section-title node-section-small" x="94" y="10">
+                  Entidades territoriales
                 </text>
-                <text class="node-role" x="18" y="66">Rol: Incide / Produce</text>
+                <text class="node-caption" x="94" y="72">Ejecución y alineación local</text>
               </g>
 
               <g
-                class="node node-compact tone-creacion"
-                id="node-industrias"
-                data-node="industrias"
-                tabindex="0"
-                role="button"
-                aria-label="Industrias culturales y creativas"
-                transform="translate(240 542)"
-              >
-                <rect class="node-card" width="190" height="92" rx="18" filter="url(#cardShadow)"></rect>
-                <rect class="node-bar" width="190" height="8" rx="18"></rect>
-                <text class="node-title" x="18" y="18">
-                  <tspan x="18" dy="0">INDUSTRIAS</tspan>
-                  <tspan x="18" dy="13">CULTURALES Y</tspan>
-                  <tspan x="18" dy="13">CREATIVAS</tspan>
-                </text>
-                <text class="node-role" x="18" y="70">Rol: Compite / Circula</text>
-              </g>
-
-              <g
-                class="node node-compact tone-sncci"
-                id="node-sncci"
-                data-node="sncci"
-                tabindex="0"
-                role="button"
-                aria-label="SNCCI y DNP"
-                transform="translate(460 542)"
-              >
-                <rect class="node-card" width="190" height="92" rx="18" filter="url(#cardShadow)"></rect>
-                <rect class="node-bar" width="190" height="8" rx="18"></rect>
-                <text class="node-title" x="18" y="22">SNCCI / DNP</text>
-                <text class="node-role" x="18" y="48">
-                  <tspan x="18" dy="0">Rol: Vincula competitividad</tspan>
-                  <tspan x="18" dy="13">e innovación</tspan>
-                </text>
-              </g>
-
-              <g
-                class="node node-compact tone-regalias"
-                id="node-regalias"
-                data-node="regalias"
-                tabindex="0"
-                role="button"
-                aria-label="Sistema de regalías"
-                transform="translate(680 542)"
-              >
-                <rect class="node-card" width="190" height="92" rx="18" filter="url(#cardShadow)"></rect>
-                <rect class="node-bar" width="190" height="8" rx="18"></rect>
-                <text class="node-title" x="18" y="20">
-                  <tspan x="18" dy="0">SISTEMA DE</tspan>
-                  <tspan x="18" dy="14">REGALÍAS</tspan>
-                </text>
-                <text class="node-role" x="18" y="66">Rol: Financia territorialmente</text>
-              </g>
-
-              <g
-                class="node tone-replica"
+                class="node text-node text-node-centered tone-territorial"
                 id="node-replica"
                 data-node="replica"
                 tabindex="0"
                 role="button"
                 aria-label="Réplica territorial"
-                transform="translate(70 640)"
+                transform="translate(594 602)"
               >
-                <rect class="replica-band" width="760" height="42" rx="16"></rect>
-                <text class="replica-text" x="22" y="27">
-                  Réplica departamental → ADICC / Consejo Dptal ICC ↔ CRCI / CODECTI ↔ Entidades
-                  municipales
+                <rect class="node-card" width="230" height="62" rx="20"></rect>
+                <text class="node-caption node-caption-strong" x="115" y="16">
+                  Departamental con determinantes
                 </text>
+                <text class="node-caption node-caption-strong" x="115" y="34">municipales</text>
               </g>
 
               <g class="overlay-annotations" aria-hidden="true">
-                <text class="layer-label" x="48" y="112">CAPA 1 · Triada superior</text>
-                <text class="layer-label" x="48" y="222">CAPA 2 · Nodo central</text>
-                <text class="layer-label" x="48" y="370">CAPA 3 · Organismos que concilian</text>
-                <text class="layer-label" x="48" y="506">CAPA 4 · Actores complementarios</text>
-                <text class="layer-label" x="48" y="690">CAPA 5 · Réplica territorial</text>
-
-                <text class="edge-label" x="168" y="350" style="fill: var(--color-creacion)">
-                  define / prioriza
-                </text>
-                <text class="edge-label" x="214" y="388" style="fill: var(--color-creacion)">
-                  vigilancia
-                </text>
-                <text class="edge-label" x="470" y="362" style="fill: var(--color-cultura)">
-                  concilia
-                </text>
-                <text class="edge-label" x="490" y="384" style="fill: var(--color-cultura)">
-                  ejecución
-                </text>
-                <text class="edge-label" x="620" y="350" style="fill: var(--color-territorial)">
-                  regula / concilia
-                </text>
-                <text class="edge-label" x="620" y="384" style="fill: var(--color-territorial)">
-                  vigilancia / ejecución
-                </text>
-                <text class="edge-label" x="126" y="520" style="fill: var(--color-creadores)">
-                  incide
-                </text>
-                <text class="edge-label" x="332" y="530" style="fill: var(--color-creacion)">
-                  compite / circula
-                </text>
-                <text class="edge-label" x="624" y="430" style="fill: var(--color-sncci)">
-                  vincula
-                </text>
-                <text class="edge-label" x="708" y="520" style="fill: var(--color-regalias)">
-                  financia
-                </text>
+                <path
+                  class="diagram-handline"
+                  d="M124 362 C252 388, 344 348, 450 372 C560 396, 668 392, 808 366"
+                ></path>
+                <path class="diagram-handline" d="M446 374 C446 392, 446 410, 446 428"></path>
+                <path class="diagram-handline" d="M690 374 C690 392, 690 408, 690 430"></path>
+                <path class="budget-branch" d="M652 520 C642 536, 628 548, 612 564"></path>
+                <path class="budget-branch" d="M686 520 C686 538, 686 550, 686 566"></path>
+                <path class="budget-branch" d="M720 520 C732 536, 748 548, 770 564"></path>
+                <text class="note-label" x="42" y="408">Vigila y regula,</text>
+                <text class="note-label" x="42" y="424">conceptúa.</text>
+                <text class="mini-budget-label" x="592" y="566">Congreso</text>
+                <text class="mini-budget-label" x="674" y="580">Asamblea</text>
+                <text class="mini-budget-label" x="756" y="566">Concejo</text>
               </g>
             </svg>
           </div>

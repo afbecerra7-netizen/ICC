@@ -442,6 +442,7 @@ body.sidebar-open .sidebar {
 
 .map-heading,
 .map-subheading,
+.map-microcopy,
 .node-title,
 .node-subtitle,
 .node-meta,
@@ -449,8 +450,21 @@ body.sidebar-open .sidebar {
 .replica-text,
 .edge-label,
 .decision-badge text,
-.layer-label {
+.layer-label,
+.node-display,
+.node-section-title,
+.node-annotation,
+.node-annotation-strong,
+.node-list,
+.node-caption,
+.node-highlight,
+.note-label,
+.mini-budget-label {
   dominant-baseline: hanging;
+}
+
+.map-dotfield {
+  fill: url(#dotGrid);
 }
 
 .map-heading {
@@ -462,6 +476,11 @@ body.sidebar-open .sidebar {
 .map-subheading {
   font-size: 13px;
   fill: var(--color-muted);
+}
+
+.map-microcopy {
+  font-size: 11px;
+  fill: rgba(24, 22, 31, 0.58);
 }
 
 .layer-label {
@@ -490,6 +509,16 @@ body.sidebar-open .sidebar {
     transform 0.22s ease,
     filter 0.22s ease,
     opacity 0.22s ease;
+}
+
+.text-node .node-card {
+  fill: rgba(255, 255, 255, 0);
+  stroke: transparent;
+  filter: none;
+}
+
+.text-node-centered text {
+  text-anchor: middle;
 }
 
 .node-bar {
@@ -558,6 +587,20 @@ body.sidebar-open .sidebar {
   --node-color: var(--color-central);
 }
 
+.text-node.tone-cultura .node-card,
+.text-node.tone-creacion .node-card,
+.text-node.tone-patrimonio .node-card,
+.text-node.tone-sncci .node-card,
+.text-node.tone-territorial .node-card,
+.text-node.tone-documento .node-card {
+  stroke: transparent;
+}
+
+.highlight-node .node-card {
+  fill: #ffe159;
+  stroke: rgba(239, 159, 39, 0.5);
+}
+
 .central-fill {
   fill: var(--color-central-soft);
   stroke: var(--color-central);
@@ -623,6 +666,65 @@ body.sidebar-open .sidebar {
   fill: var(--color-ink);
 }
 
+.node-display {
+  font-size: 34px;
+  font-weight: 700;
+  fill: var(--color-ink);
+  letter-spacing: -0.03em;
+}
+
+.node-section-title {
+  font-size: 24px;
+  font-weight: 700;
+  fill: var(--color-ink);
+  letter-spacing: -0.02em;
+}
+
+.node-section-medium {
+  font-size: 19px;
+}
+
+.node-section-small {
+  font-size: 18px;
+}
+
+.node-annotation {
+  font-size: 10px;
+  fill: var(--color-muted);
+}
+
+.node-annotation-strong {
+  font-size: 10px;
+  font-weight: 700;
+  fill: var(--color-ink);
+}
+
+.node-list {
+  font-size: 10px;
+  fill: var(--color-ink);
+}
+
+.node-list-tight {
+  font-size: 9.6px;
+}
+
+.node-caption {
+  font-size: 10px;
+  fill: var(--color-muted);
+}
+
+.node-caption-strong {
+  font-weight: 700;
+  fill: var(--color-ink);
+}
+
+.node-highlight {
+  font-size: 22px;
+  font-weight: 700;
+  fill: var(--color-ink);
+  letter-spacing: -0.03em;
+}
+
 .replica-band {
   fill: rgba(136, 135, 128, 0.08);
   stroke: var(--color-territorial);
@@ -684,6 +786,43 @@ body.sidebar-open .sidebar {
 
 .overlay-annotations {
   pointer-events: none;
+}
+
+.diagram-handline {
+  fill: none;
+  stroke: rgba(24, 22, 31, 0.55);
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.budget-branch {
+  fill: none;
+  stroke: rgba(24, 22, 31, 0.58);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.note-label {
+  font-size: 10px;
+  fill: var(--color-muted);
+  paint-order: stroke;
+  stroke: rgba(255, 253, 249, 0.96);
+  stroke-width: 5px;
+}
+
+.mini-budget-label {
+  font-size: 10px;
+  fill: rgba(24, 22, 31, 0.82);
+}
+
+.text-node.is-active .node-card,
+.text-node.is-linked .node-card,
+.text-node.is-selected .node-card {
+  fill: rgba(255, 253, 249, 0.94);
+  stroke: rgba(24, 22, 31, 0.16);
 }
 
 .is-active .node-card,

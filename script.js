@@ -1,87 +1,66 @@
 const nodeContent = {
-  cultura: {
-    name: "CULTURA",
+  pnd: {
+    name: "PND",
     description:
-      "Reconocida constitucionalmente como derecho, implica el acceso, la participación y la protección de la diversidad cultural. El Estado tiene responsabilidad activa en su promoción y garantía. Normas: C.P. arts. 70–72, Ley 397 de 1997.",
-    norms: ["C.P. arts. 70–72", "Ley 397 de 1997"],
-    role: "Derecho / garantía / acceso"
+      "El Plan Nacional de Desarrollo fija el marco programatico general desde el cual se orientan prioridades, metas y recursos para el sector. En este esquema funciona como punto de arranque de la articulacion nacional y como referencia para la continuidad de la politica publica ICC.",
+    norms: ["PND", "DNP", "Presupuesto nacional"],
+    role: "Orienta / enmarca / prioriza"
   },
-  creacion: {
-    name: "CREACIÓN",
+  enicc: {
+    name: "ENICC",
     description:
-      "Producción de bienes y servicios culturales y creativos que generan valor simbólico y económico, protegidos por propiedad intelectual. La Ley 1834 de 2017 (Ley Naranja) define las industrias creativas como aquellas que generan valor fundamentado en la PI. Estrategia: Las 7i. Coordina el Consejo Nacional de la Economía Naranja.",
-    norms: ["Ley 1834 de 2017", "Propiedad intelectual", "Consejo Nacional de la Economía Naranja"],
-    role: "Creación / valor simbólico / economía creativa"
+      "El ENICC opera como instancia nacional de concertacion y priorizacion. Su tarea es promover, definir y priorizar iniciativas, programas y proyectos estrategicos para el fortalecimiento de las industrias creativas y culturales, y proyectarlos hacia la escala departamental mediante la ADICC.",
+    norms: ["ENICC", "Ley 1834 de 2017", "Planeacion nacional"],
+    role: "Promueve / define / prioriza"
   },
-  patrimonio: {
-    name: "PATRIMONIO",
+  iniciativas: {
+    name: "INICIATIVAS / CONSEJO NACIONAL ICC",
     description:
-      "Conjunto de bienes materiales e inmateriales que constituyen memoria colectiva, sujetos a protección especial del Estado. Implica tensión entre protección y circulación. Normas: C.P. art. 72, Ley 397/1997, UNESCO 2005.",
-    norms: ["C.P. art. 72", "Ley 397/1997", "UNESCO 2005"],
-    role: "Protección / memoria / circulación"
+      "Bloque de representacion nacional desde donde se conceptuan, vigilan y priorizan iniciativas. La propuesta recoge cinco voces base: Consejos Nacionales de Juventud, Consejo Nacional de Cultura, sector empresarial, Consejo Nacional de Planeacion y academia, con apertura a otras formas de representacion ciudadana.",
+    norms: ["Participacion ciudadana", "Consejo Nacional de Cultura", "Consejos de Juventud", "Planeacion nacional"],
+    role: "Conceptua / vigila / propone"
   },
-  documento: {
-    name: "DOCUMENTO DE CONCILIACIÓN / ADICC",
+  pdd: {
+    name: "PDD / COMITÉ DEPARTAMENTAL ICC",
     description:
-      "Nodo de mayor concentración de decisiones del sistema. El ENICC promueve, define y prioriza iniciativas, programas y proyectos estratégicos del sector, y esa priorización se concreta en la ADICC, Agenda Departamental de Industrias Creativas y Culturales. La ADICC funciona como instrumento de planificación y continuidad entre el PND, los PDD y los PMD, con 32 agendas departamentales y horizonte de seis años para orientar la ejecución ministerial y territorial.",
-    norms: ["ENICC", "ADICC", "PND", "PDD", "PMD"],
-    role: "Prioriza / articula / concentra"
+      "El nivel departamental replica la gobernanza nacional en clave territorial. El comite departamental integra juventud, cultura, sector empresarial, planeacion, academia y secretarias estrategicas para alinear el Plan Departamental de Desarrollo con la agenda ICC del territorio.",
+    norms: ["PDD", "Consejo Departamental de Cultura", "Consejo Departamental de Juventud", "Planeacion territorial"],
+    role: "Alinea / territorializa / prioriza"
   },
-  consejo: {
-    name: "ENICC / CONSEJO ICC",
+  adicc: {
+    name: "ADICC",
     description:
-      "Instancia mixta de gobernanza, concertación y planeación estratégica del ecosistema ICC. Su composición propuesta integra Consejos Nacionales de Juventud, Consejo Nacional de Cultura, representación empresarial y gremial, Consejo Nacional de Planeación, creadores independientes, asociaciones culturales y ciudadanía organizada. Su función central es definir y priorizar iniciativas, programas y proyectos estratégicos del sector.",
-    norms: ["Ley 1834 de 2017", "Participación ciudadana", "Planeación nacional"],
-    role: "Define / prioriza / decide"
+      "La Agenda Departamental de Industrias Creativas y Culturales es el instrumento donde se aterrizan las prioridades del sistema. Alli quedan consignados programas, proyectos estrategicos y actividades clave, dando continuidad entre PND, PDD y PMD. En esta propuesta existirian 32 ADICC, una por departamento y Distrito Capital, con horizonte de mediano plazo.",
+    norms: ["ADICC", "PND", "PDD", "PMD", "Agenda departamental"],
+    role: "Articula / prioriza / da continuidad"
   },
-  ministerio: {
-    name: "MINISTERIO DE CULTURA + CARTERA",
+  presupuesto: {
+    name: "PRESUPUESTO DE DESTINACIÓN",
     description:
-      "Delegados del gobierno nacional. Junto con otros ministerios con cartera (Comercio, TIC, Educación), ejecutan las estrategias definidas en el documento de conciliación. Rol: ejecuta y financia.",
-    norms: ["Ley 397 de 1997", "Ministerio de Cultura", "Carteras asociadas"],
-    role: "Ejecuta / financia"
+      "La ADICC necesita respaldo financiero mediante presupuesto nacional y territorial de destinacion programatica. Su ejecucion se relaciona con los planes de desarrollo y con las instancias de aprobacion politica y presupuestal, como Congreso, asambleas y concejos.",
+    norms: ["Presupuesto nacional", "Presupuesto territorial", "Congreso", "Asamblea", "Concejo"],
+    role: "Financia / habilita ejecucion"
   },
-  territorial: {
-    name: "ENTIDAD TERRITORIAL DEPARTAMENTAL",
+  ministerios: {
+    name: "MINISTERIOS",
     description:
-      "Réplica departamental de la gobernanza del sistema. Debe articular consejos de cultura, juventudes, representantes empresariales, instancias de planeación territorial y sociedad civil, en diálogo con la CRCI y el CODECTI. En esta escala se priorizan proyectos, se aterriza la ADICC y se coordina la continuidad entre el plan departamental, los municipios y la ejecución territorial.",
-    norms: ["PDD", "PMD", "ADICC", "CRCI", "CODECTI"],
-    role: "Regula / ejecuta / prioriza territorialmente"
+      "Los ministerios convierten la priorizacion en ejecucion nacional con enfoque departamental. En esta capa entran Ministerio de las Culturas y otras carteras competentes, que implementan programas, convocatorias y proyectos asociados a la agenda acordada.",
+    norms: ["Ministerio de las Culturas", "Carteras asociadas", "Presupuesto nacional"],
+    role: "Ejecuta / implementa"
   },
-  sncci: {
-    name: "SNCCI / DNP",
+  entidades: {
+    name: "ENTIDADES TERRITORIALES",
     description:
-      "Sistema Nacional de Competitividad e Innovación. Es el puente entre cultura, economía y planeación. Conecta las ICC con las dinámicas de competitividad e innovación y puede articularse territorialmente con la CRCI y el CODECTI para fortalecer la incorporación del sector creativo en agendas regionales de desarrollo.",
-    norms: ["SNCCI", "DNP", "CRCI", "CODECTI"],
-    role: "Vincula / articula / coordina"
-  },
-  regalias: {
-    name: "SISTEMA DE REGALÍAS",
-    description:
-      "Fuente clave de financiación territorial para proyectos culturales y creativos. Debe leerse junto con el presupuesto nacional de destinación programática, los presupuestos territoriales vinculados a los planes de desarrollo, convocatorias y otras fuentes complementarias, de manera que la ADICC tenga respaldo real para su implementación.",
-    norms: ["Sistema General de Regalías", "Presupuesto nacional", "Presupuesto territorial", "Convocatorias"],
-    role: "Financia / cofinancia"
-  },
-  creadores: {
-    name: "CREADORES / CIUDADANÍA",
-    description:
-      "Base del ecosistema. Son quienes producen el valor simbólico y cultural. Inciden en el sistema a través de los consejos de cultura, asociaciones y movilización social. Son el sujeto de derecho que la Constitución y la Ley 397 buscan proteger.",
-    norms: ["C.P. arts. 70–72", "Ley 397 de 1997", "Consejos de cultura"],
-    role: "Incide / produce"
-  },
-  industrias: {
-    name: "INDUSTRIAS CULTURALES Y CREATIVAS",
-    description:
-      "Actor productivo del ecosistema. Agrupa empresas, emprendimientos y organizaciones que transforman la creación en bienes y servicios culturales y creativos, compiten por circulación, audiencias y mercado, y se articulan con innovación, propiedad intelectual y competitividad.",
-    norms: ["Ley 1834 de 2017", "OMPI", "SNCCI / DNP"],
-    role: "Compite / circula"
+      "Gobernaciones, secretarias y otras instancias territoriales adaptan la agenda al contexto local. Desde alli se articula la ejecucion departamental y se enlazan los determinantes municipales para que la ADICC no quede solo en el nivel nacional.",
+    norms: ["Entidad territorial", "PDD", "PMD", "Gobernanza multinivel"],
+    role: "Coordina / ejecuta / territorializa"
   },
   replica: {
     name: "RÉPLICA TERRITORIAL",
     description:
-      "El modelo nacional se replica en los departamentos mediante ADICC y consejos territoriales articulados con CRCI y CODECTI. Desde allí dialoga con entidades municipales y otras escalas subregionales, lo que produce una cadena de gobernanza cultural multinivel y permite formular 32 agendas departamentales con continuidad de mediano plazo.",
-    norms: ["Gobernanza multinivel", "ADICC", "CRCI", "CODECTI", "Entidades municipales"],
-    role: "Replica / coordina / da continuidad"
+      "La escala departamental incorpora determinantes municipales y produce una cadena de gobernanza multinivel. Asi, la agenda no termina en el departamento sino que dialoga con municipios, consejos locales y otras unidades de gestion territorial.",
+    norms: ["ADICC", "Gobernanza multinivel", "Entidades municipales", "Continuidad territorial"],
+    role: "Replica / conecta / escala"
   }
 };
 
@@ -276,47 +255,41 @@ async function exportSvgToPng() {
       font-family: "DM Sans", sans-serif;
       background: #f8f7f4;
     }
+    .map-dotfield { fill: url(#dotGrid); }
     .map-heading { font-family: "DM Serif Display", serif; font-size: 30px; fill: #18161f; }
     .map-subheading { font-size: 13px; fill: #66625f; }
-    .map-heading, .map-subheading, .node-title, .node-subtitle, .node-meta, .node-role, .replica-text, .edge-label, .decision-badge text, .layer-label { dominant-baseline: hanging; }
-    .layer-label, .decision-badge text { letter-spacing: 0.04em; text-transform: uppercase; }
-    .layer-label { font-size: 10px; font-weight: 700; fill: rgba(24, 22, 31, 0.48); }
-    .node-card { fill: rgba(255,255,255,0.96); stroke-width: 1.5; }
-    .node-bar { fill: var(--node-color); }
-    .tone-cultura { --node-color: var(--color-cultura); }
-    .tone-creacion { --node-color: var(--color-creacion); }
-    .tone-patrimonio { --node-color: var(--color-patrimonio); }
-    .tone-sncci { --node-color: var(--color-sncci); }
-    .tone-regalias { --node-color: var(--color-regalias); }
-    .tone-creadores { --node-color: var(--color-creadores); }
-    .tone-territorial, .tone-replica { --node-color: var(--color-territorial); }
-    .tone-documento { --node-color: var(--color-central); }
-    .tone-cultura .node-card { stroke: rgba(29, 158, 117, 0.34); }
-    .tone-creacion .node-card { stroke: rgba(127, 119, 221, 0.34); }
-    .tone-patrimonio .node-card { stroke: rgba(239, 159, 39, 0.34); }
-    .tone-sncci .node-card { stroke: rgba(55, 138, 221, 0.34); }
-    .tone-regalias .node-card { stroke: rgba(99, 153, 34, 0.34); }
-    .tone-creadores .node-card { stroke: rgba(216, 90, 48, 0.34); }
-    .tone-territorial .node-card, .tone-replica .node-card { stroke: rgba(136, 135, 128, 0.34); }
-    .central-fill { fill: var(--color-central-soft); stroke: var(--color-central); stroke-width: 2; }
-    .node-double-border { fill: none; stroke: rgba(83, 74, 183, 0.36); stroke-width: 1.4; }
-    .decision-badge rect { fill: rgba(83, 74, 183, 0.12); }
-    .decision-badge text { font-size: 10px; font-weight: 700; fill: var(--color-central); }
-    .node-title { font-size: 14px; font-weight: 700; fill: #18161f; }
-    .central-title { font-size: 18px; }
-    .node-subtitle { font-size: 12px; fill: #66625f; }
-    .node-meta, .node-role, .replica-text { font-size: 11px; fill: #66625f; }
-    .node-role, .replica-text { font-weight: 700; fill: #18161f; }
-    .replica-band { fill: rgba(136, 135, 128, 0.08); stroke: #888780; stroke-width: 1.6; stroke-dasharray: 6 7; }
+    .map-microcopy { font-size: 11px; fill: rgba(24, 22, 31, 0.58); }
+    .map-heading, .map-subheading, .map-microcopy, .node-display, .node-section-title, .node-annotation, .node-annotation-strong, .node-list, .node-caption, .node-highlight, .note-label, .mini-budget-label { dominant-baseline: hanging; }
+    .node-card { fill: rgba(255,255,255,0.96); stroke-width: 1.4; }
+    .text-node .node-card { fill: rgba(255,255,255,0); stroke: transparent; }
+    .text-node.is-active .node-card, .text-node.is-linked .node-card, .text-node.is-selected .node-card { fill: rgba(255,253,249,0.94); stroke: rgba(24,22,31,0.16); }
+    .highlight-node .node-card { fill: #ffe159; stroke: rgba(239,159,39,0.5); }
+    .text-node-centered text { text-anchor: middle; }
+    .node-display { font-size: 34px; font-weight: 700; fill: #18161f; letter-spacing: -0.03em; }
+    .node-section-title { font-size: 24px; font-weight: 700; fill: #18161f; letter-spacing: -0.02em; }
+    .node-section-medium { font-size: 19px; }
+    .node-section-small { font-size: 18px; }
+    .node-annotation { font-size: 10px; fill: #66625f; }
+    .node-annotation-strong { font-size: 10px; font-weight: 700; fill: #18161f; }
+    .node-list { font-size: 10px; fill: #18161f; }
+    .node-list-tight { font-size: 9.6px; }
+    .node-caption { font-size: 10px; fill: #66625f; }
+    .node-caption-strong { font-weight: 700; fill: #18161f; }
+    .node-highlight { font-size: 22px; font-weight: 700; fill: #18161f; letter-spacing: -0.03em; }
+    .edge-group { color: var(--edge-color); }
     .edge { fill: none; stroke: currentColor; vector-effect: non-scaling-stroke; }
     .edge-track { stroke-width: 2.2; }
     .edge-dashed { stroke-dasharray: 6 8; }
     .edge-flow { stroke-width: 1.2; opacity: 0.75; }
     .edge-flow-solid { stroke-dasharray: 12 18; }
     .edge-flow-dashed { stroke-dasharray: 4 10; }
-    .edge-label { font-size: 10px; font-weight: 700; stroke: rgba(255, 253, 249, 0.92); stroke-width: 4px; paint-order: stroke; }
+    .diagram-handline { fill: none; stroke: rgba(24,22,31,0.55); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+    .budget-branch { fill: none; stroke: rgba(24,22,31,0.58); stroke-width: 1.6; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+    .note-label { font-size: 10px; fill: #66625f; stroke: rgba(255,253,249,0.96); stroke-width: 5px; paint-order: stroke; }
+    .mini-budget-label { font-size: 10px; fill: #343239; }
     .is-dimmed { opacity: 0.18; }
-    .edge-group { color: var(--edge-color); }
+    .edge-group.is-active .edge-track, .edge-group.is-active .edge-flow { stroke-width: 3; }
+    .edge-group.is-active .edge-flow { stroke-width: 1.6; }
   `;
 
   clonedSvg.insertBefore(exportStyle, clonedSvg.firstChild);
@@ -358,5 +331,5 @@ async function exportSvgToPng() {
 
 exportPngButton.addEventListener("click", exportSvgToPng);
 
-fillSidebar("documento");
+fillSidebar("adicc");
 renderFocusState();
