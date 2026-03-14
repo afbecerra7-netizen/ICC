@@ -2,70 +2,70 @@ const nodeContent = {
   pnd: {
     name: "PND",
     description:
-      "El Plan Nacional de Desarrollo fija el marco programatico general desde el cual se orientan prioridades, metas y recursos para el sector. En este esquema funciona como punto de arranque de la articulacion nacional y como referencia para la continuidad de la politica publica ICC.",
+      "El Plan Nacional de Desarrollo fija el marco programático general desde el cual se orientan prioridades, metas y recursos para el sector. En este esquema funciona como punto de arranque de la articulación nacional y como referencia para la continuidad de la política pública ICC.",
     norms: ["PND", "DNP", "Presupuesto nacional"],
     role: "Orienta / enmarca / prioriza"
   },
   enicc: {
     name: "ENICC",
     description:
-      "El ENICC opera como instancia nacional de concertacion y priorizacion. Su tarea es promover, definir y priorizar iniciativas, programas y proyectos estrategicos para el fortalecimiento de las industrias creativas y culturales, y proyectarlos hacia la escala departamental mediante la ADICC.",
-    norms: ["ENICC", "Ley 1834 de 2017", "Planeacion nacional"],
+      "El ENICC opera como instancia nacional de concertación y priorización. Su tarea es promover, definir y priorizar iniciativas, programas y proyectos estratégicos para el fortalecimiento de las industrias creativas y culturales, y proyectarlos hacia la escala departamental mediante la ADICC.",
+    norms: ["ENICC", "Ley 1834 de 2017", "Planeación nacional"],
     role: "Promueve / define / prioriza"
   },
   iniciativas: {
     name: "COMITÉ NACIONAL ICC",
     description:
-      "Instancia nacional de representacion y concertacion para priorizar iniciativas del ecosistema ICC. En esta version del esquema se sintetiza en cinco miembros base: juventud, cultura, sector empresarial, Consejo Privado de Competitividad y representacion de Confecamaras, como nucleo minimo para la deliberacion sectorial y la articulacion con el ecosistema productivo.",
-    norms: ["Participacion ciudadana", "Consejo Nacional de Cultura", "Consejos de Juventud", "Sector empresarial", "Consejo Privado de Competitividad", "Confecamaras"],
-    role: "Conceptua / vigila / propone"
+      "Instancia nacional de representación y concertación para priorizar iniciativas del ecosistema ICC. En esta versión del esquema se sintetiza en cinco miembros base: juventud, cultura, sector empresarial, Consejo Privado de Competitividad y representación de Confecámaras, como núcleo mínimo para la deliberación sectorial y la articulación con el ecosistema productivo.",
+    norms: ["Participación ciudadana", "Consejo Nacional de Cultura", "Consejos de Juventud", "Sector empresarial", "Consejo Privado de Competitividad", "Confecámaras"],
+    role: "Conceptúa / vigila / propone"
   },
   pdd: {
     name: "PDD",
     description:
-      "El Plan Departamental de Desarrollo funciona aqui como marco de referencia territorial. Desde este nodo se alinean prioridades, metas y recursos del departamento con la agenda ICC y con la continuidad entre planeacion nacional, departamental y municipal.",
-    norms: ["PDD", "Planeacion territorial", "Gobernanza departamental"],
+      "El Plan Departamental de Desarrollo funciona aquí como marco de referencia territorial. Desde este nodo se alinean prioridades, metas y recursos del departamento con la agenda ICC y con la continuidad entre planeación nacional, departamental y municipal.",
+    norms: ["PDD", "Planeación territorial", "Gobernanza departamental"],
     role: "Enmarca / orienta / articula"
   },
   comite: {
     name: "COMITÉ DEPARTAMENTAL ICC",
     description:
-      "Instancia territorial de concertacion que replica la logica del comite nacional en clave ampliada. El bloque conserva nueve integrantes: consejo departamental de juventud, consejo departamental de cultura, sector empresarial, consejo departamental de planeacion, academia, secretarias de cultura, CTeI y planeacion, ademas del frente de desarrollo economico.",
-    norms: ["Consejo Departamental de Cultura", "Consejo Departamental de Juventud", "Sector empresarial", "Planeacion territorial", "CTeI", "Desarrollo economico"],
+      "Instancia territorial de concertación que replica la lógica del comité nacional en clave ampliada. El bloque conserva nueve integrantes: consejo departamental de juventud, consejo departamental de cultura, sector empresarial, consejo departamental de planeación, academia, secretarías de cultura, CTeI y planeación, además del frente de desarrollo económico.",
+    norms: ["Consejo Departamental de Cultura", "Consejo Departamental de Juventud", "Sector empresarial", "Planeación territorial", "CTeI", "Desarrollo económico"],
     role: "Alinea / territorializa / prioriza"
   },
   adicc: {
     name: "ADICC",
     description:
-      "La Agenda Departamental de Industrias Creativas y Culturales es el instrumento donde se aterrizan las prioridades del sistema. Alli quedan consignados programas, proyectos estrategicos y actividades clave, dando continuidad entre PND, PDD y PMD. En esta propuesta existirian 32 ADICC, una por departamento y Distrito Capital, con horizonte de mediano plazo.",
+      "La Agenda Departamental de Industrias Creativas y Culturales es el instrumento donde se aterrizan las prioridades del sistema. Allí quedan consignados programas, proyectos estratégicos y actividades clave, dando continuidad entre PND, PDD y PMD. En esta propuesta existirían 32 ADICC, una por departamento y Distrito Capital, con horizonte de mediano plazo.",
     norms: ["ADICC", "PND", "PDD", "PMD", "Agenda departamental"],
     role: "Articula / prioriza / da continuidad"
   },
   presupuesto: {
     name: "PRESUPUESTO DE DESTINACIÓN",
     description:
-      "La ADICC necesita respaldo financiero mediante presupuesto nacional y territorial de destinacion programatica. Su ejecucion se relaciona con los planes de desarrollo y con las instancias de aprobacion politica y presupuestal, como Congreso, asambleas y concejos.",
+      "La ADICC necesita respaldo financiero mediante presupuesto nacional y territorial de destinación programática. Su ejecución se relaciona con los planes de desarrollo y con las instancias de aprobación política y presupuestal, como Congreso, asambleas y concejos.",
     norms: ["Presupuesto nacional", "Presupuesto territorial", "Congreso", "Asamblea", "Concejo"],
-    role: "Financia / habilita ejecucion"
+    role: "Financia / habilita ejecución"
   },
   ministerios: {
-    name: "MINISTERIO DE CULTURA",
+    name: "MINISTERIOS Y AGENCIAS NACIONALES",
     description:
-      "El Ministerio de Cultura convierte la priorizacion en ejecucion nacional con enfoque departamental. En este esquema aparecen sus direcciones de Patrimonio y Memoria, Fomento Regional, Poblaciones, Artes, Audiovisuales, Cine y Medios Interactivos, y Estrategia, Desarrollo y Emprendimiento, como frentes que pueden aterrizar la agenda ICC en programas, convocatorias y proyectos.",
-    norms: ["Ministerio de Cultura", "Direcciones misionales", "Presupuesto nacional"],
+      "Este bloque concentra la ejecución nacional con enfoque departamental. Incluye al Ministerio de Cultura con sus direcciones de Patrimonio y Memoria, Fomento Regional, Poblaciones, Artes, Audiovisuales, Cine y Medios Interactivos, y Estrategia, Desarrollo y Emprendimiento; y suma también al Ministerio del Interior y a las agencias nacionales que concurren en la implementación de programas, convocatorias y proyectos.",
+    norms: ["Ministerio de Cultura", "Ministerio del Interior", "Agencias nacionales", "Presupuesto nacional"],
     role: "Ejecuta / implementa"
   },
   entidades: {
     name: "ENTIDADES TERRITORIALES",
     description:
-      "Gobernaciones, secretarias y otras instancias territoriales adaptan la agenda al contexto local. Desde alli se articula la ejecucion departamental y se enlazan los determinantes municipales para que la ADICC no quede solo en el nivel nacional.",
+      "Gobernaciones, secretarías y otras instancias territoriales adaptan la agenda al contexto local. Desde allí se articula la ejecución departamental y se enlazan los determinantes municipales para que la ADICC no quede solo en el nivel nacional.",
     norms: ["Entidad territorial", "PDD", "PMD", "Gobernanza multinivel"],
     role: "Coordina / ejecuta / territorializa"
   },
   replica: {
     name: "RÉPLICA TERRITORIAL",
     description:
-      "La escala departamental incorpora determinantes municipales y produce una cadena de gobernanza multinivel. Asi, la agenda no termina en el departamento sino que dialoga con municipios, consejos locales y otras unidades de gestion territorial.",
+      "La escala departamental incorpora determinantes municipales y produce una cadena de gobernanza multinivel. Así, la agenda no termina en el departamento sino que dialoga con municipios, consejos locales y otras unidades de gestión territorial.",
     norms: ["ADICC", "Gobernanza multinivel", "Entidades municipales", "Continuidad territorial"],
     role: "Replica / conecta / escala"
   }
