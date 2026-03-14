@@ -171,9 +171,14 @@ summary {
   max-width: 100%;
 }
 
-.reflection-note {
-  font-size: 0.9rem;
-  color: var(--color-muted);
+.reflection-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.reflection-columns p {
+  margin: 0;
 }
 
 .main-layout {
@@ -1063,6 +1068,10 @@ body.sidebar-open .sidebar {
 @media (max-width: 1120px) {
   .app-shell {
     width: 100%;
+  }
+
+  .reflection-columns {
+    grid-template-columns: 1fr;
   }
 
   .main-layout {
